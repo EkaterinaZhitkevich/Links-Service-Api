@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/script/change_set_0001_create_links_table.sql
+  - include:
+      file: db/changelog/script/change_set_0002_alter_links_table.sql
+  - include:
+      file: db/changelog/script/change_set_0003_alter_links_constraint_table.sql
+  - include:
+      file: db/changelog/script/change_set_0004_alter_links_add_column_last_select.sql
+
+#  - changeSet:
+#      id: create-links
+#      author: Ekaterina Zhitkevich
+#      changes:
+#        - createTable:
+#            tableName: links
+#            columns:
+#              - column:
+#                  name: id
+#                  type: bigint
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: long_link
+#                  type: varchar(100)
+#              - column:
+#                  name: short_link
+#                  type: varchar(10)
+#              - column:
+#                  name: data_time
+#                  type: timestamp
+#
+#  - changeSet:
+#      id: change-column_date_name
+#      author: Ekaterina Zhitkevich
+#      changes:
+#        - renameColumn:
+#            tableName: links
+#            newColumnName: date_time
+#            oldColumnName: data_time
