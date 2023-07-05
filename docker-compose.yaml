@@ -1,0 +1,14 @@
+services:
+  postgres:
+   image: postgres:15.3
+   container_name: postgres
+   environment:
+     POSTGRES_DB: links_service
+     POSTGRES_USER: postgres
+     POSTGRES_PASSWORD: 12345
+   ports:
+     - 5432:5432
+
+
+
+

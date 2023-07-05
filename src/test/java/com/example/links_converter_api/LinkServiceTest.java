@@ -64,11 +64,6 @@ public class LinkServiceTest {
         verify(mockLink, times(1)).setShortLink(shortLink);
     }
 
-//    public void setShortLinkForLongLink(Link link) {
-//        String longLink = link.getLongLink();
-//        link.setShortLink(createShortLinkForLongLink(longLink));
-//    }
-
     @Test
     public void testForTestLinkService(){
         Link spyLink = Mockito.spy(Link.class);
