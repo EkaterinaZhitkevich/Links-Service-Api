@@ -9,6 +9,16 @@ services:
    ports:
      - 5432:5432
 
+  links_service:
+     image: links_service:0.1
+     ports:
+       - 8088:8088
+     depends_on:
+        - postgres
+     environment:
+       SERVER_PORT: 8088
+       SERVER_DATASOURCE_URL: jdbc:postgresql://postgres:5432/links_service
+
 
 
 

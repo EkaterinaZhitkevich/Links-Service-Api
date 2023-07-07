@@ -1,6 +1,8 @@
+server:
+  port: 8088
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/links_service
+    url: ${SERVER_DATASOURCE_URL:jdbc:postgresql://localhost:5432/links_service}
     username: postgres
     password: 12345
   jpa:
